@@ -19,4 +19,8 @@ class Page extends MY_Controller {
     // function render_backend tersebut dari file core/MY_Controller.php
     $this->render_backend('kontak'); // load view kontak.php
   }
+  public function user()
+  {
+    redirect('user'); 
+  }
 }

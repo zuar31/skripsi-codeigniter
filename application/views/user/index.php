@@ -345,21 +345,21 @@ function delete_level(id)
 			debug: false,
 			errorClass: 'invalid-feedback',
 			errorElement: 'div',
-			errorPlacement: (error, e) => {
+			errorPlacement: function(error, e){
 				jQuery(e).parents('.form-group div').append(error);
 			},
-			highlight: e => {
+			highlight: function(e) {
 				jQuery(e).closest('div').removeClass('is-invalid').addClass('is-invalid');
 				document.getElementById("btnSave").style.opacity = "0.5";
 				$(e).css('border-color', 'red'); 
 			},
-			unhighlight: e => {
+			unhighlight: function(e){
 				jQuery(e).closest('div').removeClass('is-invalid');
 				document.getElementById("btnSave").style.opacity = "1";
 				$(e).css("border",'');
 				$(e).css('border-color', '#4caf50'); 
 			},
-			success: e => {
+			success: function(e){
 				jQuery(e).closest('div').removeClass('is-invalid');
 				jQuery(e).remove();
 				document.getElementById("btnSave").style.opacity = "1";
@@ -465,21 +465,21 @@ function delete_level(id)
 			debug: false,
 			errorClass: 'invalid-feedback',
 			errorElement: 'div',
-			errorPlacement: (error, e) => {
+			errorPlacement: function(error, e){
 				jQuery(e).parents('.form-group div').append(error);
 			},
-			highlight: e => {
+			highlight: function(e){
 				jQuery(e).closest('div').removeClass('is-invalid').addClass('is-invalid');
 				document.getElementById("btnSave").style.opacity = "0.5";
 				$(e).css('border-color', 'red'); 
 			},
-			unhighlight: e => {
+			unhighlight: function(e){
 				jQuery(e).closest('div').removeClass('is-invalid');
 				document.getElementById("btnSave").style.opacity = "1";
 				$(e).css("border",'');
 				$(e).css('border-color', '#4caf50'); 
 			},
-			success: e => {
+			success: function(e){
 				jQuery(e).closest('div').removeClass('is-invalid');
 				jQuery(e).remove();
 				document.getElementById("btnSave").style.opacity = "1";

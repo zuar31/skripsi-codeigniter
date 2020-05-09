@@ -346,7 +346,7 @@ function delete_level(id)
 			errorClass: 'invalid-feedback',
 			errorElement: 'div',
 			errorPlacement: (error, e) => {
-				jQuery(e).parents('.form-group > div').append(error);
+				jQuery(e).parents('.form-group div').append(error);
 			},
 			highlight: e => {
 				jQuery(e).closest('div').removeClass('is-invalid').addClass('is-invalid');
@@ -466,7 +466,7 @@ function delete_level(id)
 			errorClass: 'invalid-feedback',
 			errorElement: 'div',
 			errorPlacement: (error, e) => {
-				jQuery(e).parents('.form-group > div').append(error);
+				jQuery(e).parents('.form-group div').append(error);
 			},
 			highlight: e => {
 				jQuery(e).closest('div').removeClass('is-invalid').addClass('is-invalid');

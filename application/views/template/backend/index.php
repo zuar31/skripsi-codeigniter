@@ -41,6 +41,9 @@
  <link rel="stylesheet" href="<?php echo base_url();?>assets/topbar/assets/examples/css/tables/datatable.css">
  <link rel="stylesheet" href="<?php echo base_url();?>assets/topbar/assets/vendor/select2/select2.css">
 
+<link rel="stylesheet" href="<?php echo base_url();?>assets/topbar/assets/vendor/chartist/chartist.css">
+<link rel="stylesheet" href="<?php echo base_url();?>assets/topbar/assets/vendor/chartist-plugin-tooltip/chartist-plugin-tooltip.css">
+
 
 
  <!-- Fonts -->
@@ -211,6 +214,9 @@
 <script src="<?php echo base_url();?>assets/topbar/assets/examples/js/tables/datatable.js"></script>
 <script src="<?php echo base_url();?>assets/topbar/assets/js/Plugin/bootstrap-datepicker.js"></script>
  <script src="<?php echo base_url();?>assets/js/jquery.validate.js"></script>
+
+ <script src="<?php echo base_url();?>assets/topbar/assets/vendor/chartist/chartist.js"></script>
+<script src="<?php echo base_url();?>assets/topbar/assets/vendor/chartist-plugin-tooltip/chartist-plugin-tooltip.js"></script>
 
  <script>
       (function(document, window, $){

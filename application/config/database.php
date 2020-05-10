@@ -64,6 +64,22 @@ $db['default']['swap_pre'] = '';
 $db['default']['autoinit'] = TRUE;
 $db['default']['stricton'] = FALSE;
 
+$db['snort']['hostname'] = 'localhost';
+$db['snort']['username'] = 'root';
+$db['snort']['password'] = 'root';
+$db['snort']['database'] = 'spk';
+$db['snort']['dbdriver'] = 'mysqli';
+$db['snort']['dbprefix'] = '';
+$db['snort']['pconnect'] = TRUE;
+$db['snort']['db_debug'] = TRUE;
+$db['snort']['cache_on'] = FALSE;
+$db['snort']['cachedir'] = '';
+$db['snort']['char_set'] = 'utf8';
+$db['snort']['dbcollat'] = 'utf8_general_ci';
+$db['snort']['swap_pre'] = '';
+$db['snort']['autoinit'] = TRUE;
+$db['snort']['stricton'] = FALSE;
+
 
 /* End of file database.php */
 /* Location: ./application/config/database.php */

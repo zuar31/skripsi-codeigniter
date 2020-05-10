@@ -3,7 +3,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Page extends MY_Controller {
   public function home(){
     // function render_backend tersebut dari file core/MY_Controller.php
-    $this->render_backend('home'); // load view home.php
+     // load view home.php
+    redirect('home'); 
   }
   public function berita(){
     // function render_backend tersebut dari file core/MY_Controller.php

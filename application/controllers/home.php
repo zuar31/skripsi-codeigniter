@@ -15,11 +15,10 @@ class Home extends MY_Controller {
   }
   
   public function index(){
-    $db2=$this->load->database('snort', TRUE);
 
     //Hasil Query Untuk Tabel
     $query="SELECT ip_src ,ip_dst, ip_proto,layer4_dport,sig_name as sig,count(sid) as jumlahalert,count(DISTINCT(ip_src)) as count_ip_src, count(DISTINCT(ip_dst)) as count_ip_dst,MIN(timestamp) as first, MAX(timestamp)as last FROM view_acid_event GROUP BY sig_name, ip_src ORDER BY MIN(timestamp)";
-    $query = $db2->query($query);
+    $query = $this->db->query($query);
     $data['tabel']=$query->result();
     //End
 
@@ -30,7 +29,7 @@ class Home extends MY_Controller {
     $y = array();
 
     $query="SELECT *,COUNT(sig_name) as jumlah_alert FROM `view_acid_event`group by sig_name order by jumlah_alert asc";
-    $query = $db2->query($query);
+    $query = $this->db->query($query);
 
     if($query->num_rows()>0)
     {
@@ -49,7 +48,7 @@ class Home extends MY_Controller {
     $y1 = array();
 
     $query="SELECT *,COUNT(ip_src) as jumlah_alert FROM `view_acid_event`group by ip_src order by jumlah_alert asc";
-    $query = $db2->query($query);
+    $query = $this->db->query($query);
 
     if($query->num_rows()>0)
     {

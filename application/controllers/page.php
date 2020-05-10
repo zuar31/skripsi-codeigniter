@@ -6,9 +6,9 @@ class Page extends MY_Controller {
      // load view home.php
     redirect('home'); 
   }
-  public function berita(){
+  public function monitor(){
     // function render_backend tersebut dari file core/MY_Controller.php
-    $this->render_backend('berita'); // load view berita.php
+    redirect('monitor'); 
   }
   public function pengguna(){
     if($this->session->userdata('role') != 'admin') // Jika user yg login bukan admin

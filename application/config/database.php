@@ -51,7 +51,7 @@ $active_record = TRUE;
 $db['default']['hostname'] = 'localhost';
 $db['default']['username'] = 'root';
 $db['default']['password'] = 'root';
-$db['default']['database'] = 'test_ci';
+$db['default']['database'] = 'spk';
 $db['default']['dbdriver'] = 'mysqli';
 $db['default']['dbprefix'] = '';
 $db['default']['pconnect'] = TRUE;
@@ -64,21 +64,21 @@ $db['default']['swap_pre'] = '';
 $db['default']['autoinit'] = TRUE;
 $db['default']['stricton'] = FALSE;
 
-$db['snort']['hostname'] = 'localhost';
-$db['snort']['username'] = 'root';
-$db['snort']['password'] = 'root';
-$db['snort']['database'] = 'spk';
-$db['snort']['dbdriver'] = 'mysqli';
-$db['snort']['dbprefix'] = '';
-$db['snort']['pconnect'] = TRUE;
-$db['snort']['db_debug'] = TRUE;
-$db['snort']['cache_on'] = FALSE;
-$db['snort']['cachedir'] = '';
-$db['snort']['char_set'] = 'utf8';
-$db['snort']['dbcollat'] = 'utf8_general_ci';
-$db['snort']['swap_pre'] = '';
-$db['snort']['autoinit'] = TRUE;
-$db['snort']['stricton'] = FALSE;
+// $db['snort']['hostname'] = 'localhost';
+// $db['snort']['username'] = 'root';
+// $db['snort']['password'] = 'root';
+// $db['snort']['database'] = 'spk';
+// $db['snort']['dbdriver'] = 'mysqli';
+// $db['snort']['dbprefix'] = '';
+// $db['snort']['pconnect'] = TRUE;
+// $db['snort']['db_debug'] = TRUE;
+// $db['snort']['cache_on'] = FALSE;
+// $db['snort']['cachedir'] = '';
+// $db['snort']['char_set'] = 'utf8';
+// $db['snort']['dbcollat'] = 'utf8_general_ci';
+// $db['snort']['swap_pre'] = '';
+// $db['snort']['autoinit'] = TRUE;
+// $db['snort']['stricton'] = FALSE;
 
 
 /* End of file database.php */

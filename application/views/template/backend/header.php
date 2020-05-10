@@ -102,6 +102,12 @@ data-toggle="collapse">
               <span class="site-menu-title">Pengaturan Pengguna</span>
           </a>
       </li>
+      <li class="dropdown site-menu-item">
+            <a data-toggle="dropdown" href="<?php echo base_url('index.php/page/monitor'); ?>" data-dropdown-toggle="false">
+              <i class="site-menu-icon wb-file" aria-hidden="true"></i>
+              <span class="site-menu-title">Monitoring IDS</span>
+          </a>
+      </li>
   </ul>      
 </div>
 </div>

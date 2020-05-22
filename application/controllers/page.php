@@ -10,6 +10,14 @@ class Page extends MY_Controller {
     // function render_backend tersebut dari file core/MY_Controller.php
     redirect('monitor'); 
   }
+  public function clustering(){
+    // function render_backend tersebut dari file core/MY_Controller.php
+    redirect('clustering'); 
+  }
+  public function rekap(){
+    // function render_backend tersebut dari file core/MY_Controller.php
+    redirect('clustering/index_rekap'); 
+  }
   public function pengguna(){
     if($this->session->userdata('role') != 'admin') // Jika user yg login bukan admin
       show_404(); // Redirect ke halaman 404 Not found

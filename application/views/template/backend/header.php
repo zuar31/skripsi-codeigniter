@@ -108,6 +108,18 @@ data-toggle="collapse">
               <span class="site-menu-title">Monitoring IDS</span>
           </a>
       </li>
+      <li class="dropdown site-menu-item">
+            <a data-toggle="dropdown" href="<?php echo base_url('index.php/page/clustering'); ?>" data-dropdown-toggle="false">
+              <i class="site-menu-icon wb-file" aria-hidden="true"></i>
+              <span class="site-menu-title">Clustering K-Means</span>
+          </a>
+      </li>
+      <li class="dropdown site-menu-item">
+            <a data-toggle="dropdown" href="<?php echo base_url('index.php/clustering/index_rekap'); ?>" data-dropdown-toggle="false">
+              <i class="site-menu-icon wb-file" aria-hidden="true"></i>
+              <span class="site-menu-title">Rekap IDS</span>
+          </a>
+      </li>
   </ul>      
 </div>
 </div>

@@ -30,6 +30,8 @@
  <link rel="stylesheet" href="<?php echo base_url();?>assets/topbar/assets/examples/css/dashboard/v2.css">
  <link rel="stylesheet" href="<?php echo base_url();?>assets/topbar/assets/vendor/bootstrap-datepicker/bootstrap-datepicker.css">
 
+ <script src="<?php echo base_url();?>assets/topbar/assets/vendor/chart-js/Chart.js"></script>
+
  <link rel="stylesheet" href="<?php echo base_url();?>assets/topbar/assets/vendor/datatables.net-bs4/dataTables.bootstrap4.css">
  <link rel="stylesheet" href="<?php echo base_url();?>assets/topbar/assets/vendor/datatables.net-fixedheader-bs4/dataTables.fixedheader.bootstrap4.css">
  <link rel="stylesheet" href="<?php echo base_url();?>assets/topbar/assets/vendor/datatables.net-fixedcolumns-bs4/dataTables.fixedcolumns.bootstrap4.css">
@@ -43,8 +45,7 @@
 
 <link rel="stylesheet" href="<?php echo base_url();?>assets/topbar/assets/vendor/chartist/chartist.css">
 <link rel="stylesheet" href="<?php echo base_url();?>assets/topbar/assets/vendor/chartist-plugin-tooltip/chartist-plugin-tooltip.css">
-
-
+<link rel="stylesheet" href="<?php echo base_url();?>assets/topbar/assets/vendor/timepicker/jquery-timepicker.css">
 
  <!-- Fonts -->
  <link rel="stylesheet" href="<?php echo base_url();?>assets/topbar/assets/fonts/glyphicons/glyphicons.css">
@@ -211,10 +212,12 @@
 <script src="<?php echo base_url();?>assets/topbar/assets/js/Plugin/datatables.js"></script>
 <script type="text/javascript" src="<?php echo base_url();?>assets/toast/js/jquery.toast.js"></script>
 
+<script src="<?php echo base_url();?>assets/topbar/assets/js/Plugin/jt-timepicker.js"></script>
+
 <script src="<?php echo base_url();?>assets/topbar/assets/examples/js/tables/datatable.js"></script>
 <script src="<?php echo base_url();?>assets/topbar/assets/js/Plugin/bootstrap-datepicker.js"></script>
  <script src="<?php echo base_url();?>assets/js/jquery.validate.js"></script>
-
+<script src="<?php echo base_url();?>assets/topbar/assets/vendor/timepicker/jquery.timepicker.min.js"></script>
  <script src="<?php echo base_url();?>assets/topbar/assets/vendor/chartist/chartist.js"></script>
 <script src="<?php echo base_url();?>assets/topbar/assets/vendor/chartist-plugin-tooltip/chartist-plugin-tooltip.js"></script>
 
@@ -229,6 +232,22 @@
       })(document, window, jQuery);
     </script>
 <script type="text/javascript">
+
+  $(document).ready(function(){
+    var response_success='<?= $this->session->flashdata('success')?>';
+    var response_error='<?= $this->session->flashdata('error')?>';
+
+    if(response_success)
+    {
+      success(response_success);
+    }
+
+    if(response_error)
+    {
+      error(response_error);
+    }
+
+  })
 
 function show_modal(url) { // clear error string
   $.ajax({

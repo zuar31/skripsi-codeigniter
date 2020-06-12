@@ -79,7 +79,7 @@ class Clustering extends MY_Controller {
                                             . " MAX(timestamp) as last"
                                             . " FROM view_acid_event"
                                             . " WHERE timestamp between '$start' and '$end'"
-                                            . " GROUP by ip_src"
+                                            . " GROUP by ip_src,sig_name,ip_dst"
                                             . " ORDER by MIN(timestamp)";
     $query = $this->db->query($query);
    

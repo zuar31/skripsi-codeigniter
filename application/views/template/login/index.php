@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
   <meta name="description" content="bootstrap admin template">
-  <meta name="author" content="">
+  <meta name="author" content="ilham lazuardi" >
 
   <title>LOGIN</title>
 
@@ -221,7 +221,8 @@
               <img class="brand-img" src="<?php echo base_url();?>assets/topbar/assets/images/logo-colored@2x.png" alt="...">
               <h3 class="brand-text font-size-40">Remark</h3>
             </div>
-            <h3 class="font-size-24">Sign In</h3>
+            <h3 class="font-size-24">SIGN IN</h3>
+            <h5>Selamat datang di aplikasi monitoring flooding attack</h5>
             <!-- <div id="infoMessage"><?php echo $message;?></div> -->
 
             <?php

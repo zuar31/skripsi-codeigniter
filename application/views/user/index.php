@@ -4,11 +4,12 @@
 		<div class="page-header-actions">
 			<ol class="breadcrumb">
 				<li class="breadcrumb-item"><a href="<?php echo base_url()?>">Home</a></li>
-				<li class="breadcrumb-item active">Pengaturan Pengguna</li>
+				<li class="breadcrumb-item active">Users</li>
 			</ol>
 		</div>
 	</div>
 	<div class="page-content">
+	
 
 		<!-- Panel Basic -->
 		<div class="panel">

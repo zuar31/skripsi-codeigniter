@@ -54,7 +54,7 @@ class Home extends MY_Controller {
     {
       foreach($query->result() as $key=>$val)
       {
-        array_push($label1, $val->sig_name);
+        array_push($label1, $val->ip_src);
         array_push($y1, $val->jumlah_alert);
       }
     }

@@ -12,11 +12,12 @@ data-toggle="collapse">
 <i class="icon wb-more-horizontal" aria-hidden="true"></i>
 </button>
 <a class="navbar-brand navbar-brand-center" href="<?php echo base_url()?>">
-  <img class="navbar-brand-logo navbar-brand-logo-normal" src="<?php echo base_url();?>assets/topbar/assets/images/logo.png"
-  title="Remark">
-  <img class="navbar-brand-logo navbar-brand-logo-special" src="<?php echo base_url();?>assets/topbar/assets/images/logo-colored.png"
-  title="Remark">
-  <span class="navbar-brand-text hidden-xs-down">Aplikasi Flooding Attack</span>
+  <img class="navbar-brand-logo navbar-brand-logo-" style="height:40px;width:auto" src="<?php echo base_url();?>assets/topbar/assets/images/upnbaru1.png">
+  <!-- <img class="navbar-brand-logo navbar-brand-logo-normal" src="<?php echo base_url();?>assets/topbar/assets/images/logo.png"
+  title="Remark"> -->
+  <!-- <img class="navbar-brand-logo navbar-brand-logo-special" src="<?php echo base_url();?>assets/topbar/assets/images/logo-colored.png"
+  title="Remark"> -->
+  <span class="navbar-brand-text hidden-xs-down">Aplikasi Monitoring Flooding Attack</span>
 </a>
 <button type="button" class="navbar-toggler collapsed" data-target="#site-navbar-search"
 data-toggle="collapse">
@@ -92,14 +93,14 @@ data-toggle="collapse">
             <!-- <a data-toggle="dropdown" href="../kategori/monitor_ids.php" data-dropdown-toggle="false"> -->
               <a data-toggle="dropdown" href="<?php echo base_url('index.php/page/home'); ?>" data-dropdown-toggle="false">
                 <i class="site-menu-icon wb-layout" aria-hidden="true"></i>
-                <span class="site-menu-title">Beranda</span>
+                <span class="site-menu-title">Home</span>
             </a>
         </li>
 
         <li class="dropdown site-menu-item">
             <a data-toggle="dropdown" href="<?php echo base_url('index.php/page/user'); ?>" data-dropdown-toggle="false">
               <i class="site-menu-icon wb-file" aria-hidden="true"></i>
-              <span class="site-menu-title">Pengaturan Pengguna</span>
+              <span class="site-menu-title">Users</span>
           </a>
       </li>
       <li class="dropdown site-menu-item">
@@ -117,7 +118,7 @@ data-toggle="collapse">
       <li class="dropdown site-menu-item">
             <a data-toggle="dropdown" href="<?php echo base_url('index.php/clustering/index_rekap'); ?>" data-dropdown-toggle="false">
               <i class="site-menu-icon wb-file" aria-hidden="true"></i>
-              <span class="site-menu-title">Rekap IDS</span>
+              <span class="site-menu-title">Rekap</span>
           </a>
       </li>
   </ul>      

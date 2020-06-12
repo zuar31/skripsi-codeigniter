@@ -2,10 +2,10 @@
     <div class="page-header">
         <h1 class="page-title">Halaman Utama</h1>
         <div class="page-header-actions">
-            <ol class="breadcrumb">
+             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="<?php echo base_url()?>">Home</a></li>
-                <li class="breadcrumb-item active">Pengaturan Pengguna</li>
-            </ol>
+                <li class="breadcrumb-item active">Halaman utama</li>
+            </ol> 
         </div>
     </div>
     <div class="page-content container-fluid">

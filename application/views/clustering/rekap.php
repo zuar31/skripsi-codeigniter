@@ -221,7 +221,7 @@
 	</div>
 	<!--cluster d-->
 	<!--start copy-->
-	<div class="col-md-12">
+	<div class="col-md-12" style="display: none">
 		<!-- Example Continuous Accordion -->
 		<div class="examle-wrap">
 			<div class="example">
@@ -410,6 +410,192 @@
 		</div>
 	</div>
 </div>
+</div>
+</div>
+</div>
+<!-- End Example Continuous Accordion -->
+</div>
+
+	<div class="col-md-12">
+		<!-- Example Continuous Accordion -->
+		<div class="examle-wrap">
+			<div class="example">
+				<div class="panel-group panel-group-continuous" id="exampleAccordionContinuous"
+				aria-multiselectable="true" role="tablist">
+				<div class="panel">
+					<div class="panel-heading" id="exampleHeadingContinuousTwo1" role="tab">
+						<a class="panel-title collapsed" data-parent="#exampleAccordionContinuous" data-toggle="collapse"
+						href="#exampleCollapseContinuousTwo1" aria-controls="exampleCollapseContinuousTwo1"
+						aria-expanded="false">
+						<b>Pembangkitan Cluster Centroid</b>
+					</a>
+				</div>
+				<div class="panel-collapse collapse" id="exampleCollapseContinuousTwo1" aria-labelledby="exampleHeadingContinuousTwo1"
+					role="tabpanel">
+					<div class="panel-body">
+						<?php
+						foreach ($intervalDurasi['d'] as $key => $value) {
+							?>
+							<div class="panel-body">
+								<h4>Data <?= $key ?></h4>
+								<table class="table table-hover dataTable table-bordered w-full" id="tabel">
+									<thead>
+										<tr>
+											<th style="width: 20px">Cluster</th>
+											<th>Centroid </th>
+											<th>Jarak</th>
+
+
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>1</td>
+											<td>(<?= $intervalDurasi['xc'][1][1] ?> , <?= $intervalDurasi['xc'][2][1] ?>) </td>
+											<td><?= $intervalDurasi['d'][$key][1] ?></td>
+										</tr>
+										<tr>
+											<td>2</td>
+											<td>(<?= $intervalDurasi['xc'][1][2] ?> , <?= $intervalDurasi['xc'][2][2] ?>) </td>
+											<td><?= $intervalDurasi['d'][$key][2] ?></td>
+										</tr>
+										<tr>
+											<td>3</td>
+											<td>(<?= $intervalDurasi['xc'][1][3] ?> , <?= $intervalDurasi['xc'][2][3] ?>) </td>
+											<td><?= $intervalDurasi['d'][$key][3] ?></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<?php
+						}
+						?>
+					</div>
+				</div>
+			</div>
+			<div class="panel">
+				<div class="panel-heading" id="exampleHeadingContinuousThree" role="tab">
+					<a class="panel-title collapsed" data-parent="#exampleAccordionContinuous" data-toggle="collapse"
+					href="#exampleCollapseContinuousThree" aria-controls="exampleCollapseContinuousThree"
+					aria-expanded="false">
+					<b> Rangking Pembangkitan</b>
+				</a>
+			</div>
+			<div class="panel-collapse collapse" id="exampleCollapseContinuousThree" aria-labelledby="exampleHeadingContinuousThree"
+				role="tabpanel">
+				<div class="panel-body">
+					<?php
+//pembangkit
+			foreach ($countAlert['x'] as $key => $value) {
+				asort($intervalDurasi['d'][$key]);
+			}
+
+			$cluster[1][1] = 0;
+			$cluster[1][2] = 0;
+			$cluster[1][3] = 0;
+
+			$cluster_s[1][1][1] = 0;
+			$cluster_s[1][2][1] = 0;
+			$cluster_s[1][3][1] = 0;
+
+
+			$cluster_s[1][1][2] = 0;
+			$cluster_s[1][2][2] = 0;
+			$cluster_s[1][3][2] = 0;
+
+			foreach ($intervalDurasi['d'] as $key => $value) {
+
+				$no = 1;
+				foreach ($value as $key2 => $value2) {
+					if ($no == 1) {
+						$result[$key]['cluster'] = $key2;
+						$result[$key]['nilai'] = $value2;
+
+						if ($key2 == 1) {
+							$cluster[1][1] += 1;
+
+							$cluster_s[1][1][1] += $countAlert['x'][$key][1];
+							$cluster_s[1][1][2] += $countAlert['x'][$key][2];
+						} else if ($key2 == 2) {
+							$cluster[1][2] += 1;
+
+							$cluster_s[1][2][1] += $countAlert['x'][$key][1];
+							$cluster_s[1][2][2] += $countAlert['x'][$key][2];
+						} else if ($key2 == 3) {
+							$cluster[1][3] += 1;
+
+							$cluster_s[1][3][1] += $countAlert['x'][$key][1];
+							$cluster_s[1][3][2] += $countAlert['x'][$key][2];
+						}
+					}
+					$no++;
+				}
+			}
+
+                                        //  echo '<pre>';
+                                        // print_r($cluster_s);
+                                        // echo '</pre>';
+                                        // die;
+
+
+//echo '<pre>';
+//print_r($result);
+//echo '</pre>';
+			?>
+			<table class="table table-hover dataTable table-bordered w-full" id="tabel">
+				<thead>
+					<tr>
+						<th>No</th>
+						<th>Ip Source</th>
+						<th>Jumlah Alert</th>
+						<th>Durasi</th>
+						<th>K2</th>
+						<th>K1</th>
+						<th>K0</th>
+						<th>Keterangan </th>         
+
+					</tr>
+				</thead>
+				<tbody>
+					<?php
+					$no = 1;
+					foreach ($intervalDurasi['d'] as $key => $value) {
+						$c1 = NULL;
+						$c2 = NULL;
+						$c3 = NULL;
+
+						if ($result[$key]['cluster'] == 1) {
+							$c1 = 'red';
+						}
+
+						if ($result[$key]['cluster'] == 2) {
+							$c2 = 'red';
+						}
+
+						if ($result[$key]['cluster'] == 3) {
+							$c3 = 'red';
+						}
+						?>
+						<tr>
+							<td><?= $no++ ?></td>
+							<td><?= $countAlert['x'][$key]['ip_src'] ?></td>
+							<td><?= $countAlert['x'][$key][1] ?></td>
+							<td><?= $countAlert['x'][$key][2] ?></td>
+							<td style="color: <?= $c1 ?>"><?= $value[1] ?></td>
+							<td style="color: <?= $c2 ?>"><?= $value[2] ?></td>
+							<td style="color: <?= $c3 ?>" ><?= $value[3] ?></td>
+							<td><?= $tipe_serangan[$result[$key]['cluster']] ?> </td>
+						</tr>
+						<?php
+					}
+					?>
+
+				</tbody>
+			</table>
+				</div>
+			</div>
+		</div>
+
 </div>
 </div>
 </div>

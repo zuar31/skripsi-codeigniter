@@ -31,17 +31,22 @@ class Clustering extends MY_Controller {
     $start_time=date('H:i:s',strtotime($this->input->post('start_time')));
     $end_time=date('H:i:s',strtotime($this->input->post('end_time')));
 
+
     $start = date('Y-m-d', strtotime($date)) . ' ' . $start_time;
     $end = date('Y-m-d', strtotime($date)) . ' ' . $end_time;
 
        
     $url=explode('/',$this->partial_uri());
+
     if(isset($url[2]) && isset($url[3])&&isset($url[4]) && isset($url[5]))
     {
         $start = $url[2] . ' ' . $url[3];
         $end = $url[4] . ' ' . $url[5];
+
+        $start_time=$url[3];
+         $end_time=$url[5];
     }
-   
+
     $tipe_serangan[1] = 'High';
     $tipe_serangan[2] = 'Medium';
     $tipe_serangan[3] = 'Low';
@@ -163,10 +168,7 @@ class Clustering extends MY_Controller {
 
  public function simpan_rekap()
  {
-    //  echo '<pre>';
-    // print_r(random());
-    // echo '</pre>';
-    // die;
+    
     $start_date=date('Y-m-d',strtotime($this->input->post('start_date')));
     $end_date=date('Y-m-d',strtotime($this->input->post('end_date')));
 
@@ -179,6 +181,10 @@ class Clustering extends MY_Controller {
 
     $datetime_awal=date('Y-m-d H:i:s',strtotime(''.$start_date.' '.$start_time.''));
     $datetime_akhir=date('Y-m-d H:i:s',strtotime(''.$end_date.' '.$end_time.''));
+    // echo '<pre>';
+    // print_r($end_time);
+    // echo '</pre>';
+    // die;
 
      $data = array(
         'periode_awal' => $datetime_awal,
